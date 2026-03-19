@@ -1,0 +1,1 @@
+@use "/src/sass/base/variables.scss" as *;.catalog{padding:50px 0}.catalog__title{margin-top:60px}.catalog__tabs{margin-top:60px;border:1px solid #dark}

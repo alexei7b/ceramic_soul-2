@@ -1,0 +1,5 @@
+@use "/src/sass/base/variables.scss" as *;
+.header {
+  display: flex;
+  justify-content: space-between;
+}

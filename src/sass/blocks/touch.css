@@ -1,0 +1,26 @@
+@use "/src/sass/base/variables.scss" as *;
+.touch {
+  padding-top: 60px;
+}
+
+.touch__wrapper {
+  margin-top: 60px;
+}
+
+.touch__img {
+  display: none;
+}
+
+.touch__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.touch label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+  color: #232323;
+}
