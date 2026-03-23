@@ -2,6 +2,7 @@
 // import "purecss/build/grids-responsive-min.css";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -70,4 +71,113 @@ try {
     });
     // Показываем первый контент при загрузке
     contents.forEach((c, i) => (c.style.display = i === 0 ? 'flex' : 'none'));
+} catch (e) { }
+
+try {
+    const validator = new JustValidate('form');
+
+    validator
+        .addField('#name', [
+            {
+                rule: 'required',
+                errorMessage: "Please fill the name"
+            },
+            {
+                rule: 'minLength',
+                value: 2,
+                errorMessage: "Min 2 char!"
+            },
+
+        ])
+        .addField('#email', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'email'
+
+            },
+
+        ])
+        .addField('#question', [
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'minLength',
+                value: 5
+            },
+
+        ], {
+            errorsContainer: document.querySelector('#question').parentElement.querySelector('.error-message'),
+        })
+        .addField('#checkbox', [
+            {
+                rule: 'required',
+            }
+        ], {
+            errorsContainer: document.querySelector('#checkbox').parentElement.parentElement.querySelector('.checkbox-error-message'),
+        })
+        .onSuccess((event) => {
+            const form = event.currentTarget;       // Получили форму
+            const formDate = new FormData(form)     // Получили данные из формы
+
+            // необходимо отправить данные на сервер, отправить запрос
+            fetch('https://httpbin.org/post', {
+                method: "POST",
+                body: formDate
+            }).then(res => res.json()).then(data => {
+                console.log('Success', data)
+                form.reset();
+            });
+        });
+} catch (e) {
+
+}
+
+try {
+    const validator__footer = new JustValidate('.footer__form');
+
+    validator__footer
+        .addField('#newsletter__email', [
+            {
+                rule: 'required',
+                errorMessage: 'Invalid email'
+            },
+            {
+                rule: 'email'
+
+            },
+
+        ], {
+            errorsContainer: document.querySelector('#newsletter__email')
+                .parentElement.querySelector('.footer-error-message')
+        })
+
+
+        .addField('#footer__checkbox', [
+            {
+                rule: 'required',
+                errorMessage: 'Fill the field'
+            }
+
+        ], {
+            errorsContainer: document.querySelector('#footer__checkbox')
+                .parentElement.parentElement.querySelector('.footer-checkbox-error-message')
+        })
+        .onSuccess((event) => {
+            const form = event.currentTarget;       // Получили форму
+            const formDate = new FormData(form)     // Получили данные из формы
+
+            // необходимо отправить данные на сервер, отправить запрос
+            fetch('https://httpbin.org/post', {
+                method: "POST",
+                body: formDate
+            }).then(res => res.json()).then(data => {
+                console.log('Success', data)
+                form.reset();
+            });
+        });
+
+
 } catch (e) { }

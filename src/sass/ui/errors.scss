@@ -1,0 +1,22 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.just-validate-error-field{
+    border: none;
+    outline: 1px solid $ui-error;
+}
+input[type="checkbox"].just-validate-error-field {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+
+.just-validate-error-label{
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.just-validate-error-field#footer__checkbox{
+  border: none;
+    outline: 1px solid $ui-error;
+}

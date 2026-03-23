@@ -116,6 +116,9 @@
         &__form{
             padding-left: 20px;
         }
+        &__decor{
+            animation: moveAndRotate 4s linear infinite;
+        }
     }
     
 }

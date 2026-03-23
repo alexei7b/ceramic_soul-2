@@ -8,6 +8,8 @@
 @use "/src/sass/base/basics.scss";
 @use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/buttons.scss";
+@use "/src/sass/ui/errors.scss";
+@use "/src/sass/ui/animation.scss";
 
 @use "/src/sass/blocks/header.scss";
 @use "/src/sass/blocks/footer.scss";
@@ -18,6 +20,9 @@
 @use "/src/sass/blocks/works.scss";
 @use "/src/sass/blocks/catalog.scss";
 @use "/src/sass/blocks/blog.scss";
+@use "/src/sass/blocks/about.scss";
+@use "/src/sass/blocks/findus.scss";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&family=Inter:ital,opsz@0,14..32;1,14..32&family=Roboto:ital@0;1&display=swap');
 

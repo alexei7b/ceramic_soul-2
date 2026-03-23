@@ -1,0 +1,42 @@
+.findus {
+  padding-top: 50px;
+}
+
+.findus__wrapper {
+  margin-top: 60px;
+}
+
+.findus__wrapper iframe {
+  width: 100%;
+  height: 206px;
+}
+
+@media screen and (min-width: 768px) {
+  .findus__wrapper {
+    padding: 0 28px;
+  }
+  .findus__wrapper iframe {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .findus iframe {
+    display: block;
+    width: 663px;
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .findus__wrapper {
+    margin-top: 80px;
+  }
+  .findus__wrapper iframe {
+    display: block;
+    width: 801px;
+    height: 604px;
+    margin: 0 auto;
+  }
+}

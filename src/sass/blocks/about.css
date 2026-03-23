@@ -1,0 +1,22 @@
+.about {
+  padding: 50px 0;
+}
+
+.about__title {
+  padding-top: 60px;
+}
+
+.about__wrapper {
+  margin-top: 60px;
+  gap: 35px;
+}
+
+.about__column-img {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.about__column-text p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #232323;
+}

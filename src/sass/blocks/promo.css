@@ -1,3 +1,4 @@
+@use "/src/sass/ui/animation.scss" as *;
 .promo {
   padding-top: 50px;
   position: relative;
@@ -67,6 +68,10 @@
   }
   .promo__title {
     padding-left: 571px;
+  }
+  .promo__cta {
+    animation-name: slideIn;
+    animation-duration: 3s;
   }
 }
 

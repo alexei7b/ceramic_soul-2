@@ -47,10 +47,44 @@
     .blog{
         &__wrapper{
             padding: 25px 25px 0 25px;
+            position: relative;
+            @include angle-decoration;
         }
         &__text{
             margin-top: 15px;
         }
         
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog{
+       
+       &__wrapper{
+        gap: 50px;
+        align-items: flex-start;
+       }
+       &__card{
+        max-width: 520px;
+        min-height: 375px;
+       }
+       &__img{
+        height: 241px;
+        object-fit: cover;
+       }                 
+    }
+}
+@media screen and (min-width: 1920px) {
+    .blog{
+       padding-top: 40px;
+        &__wrapper{
+            align-items: stretch;
+        }
+        &__title{
+            margin-top: 100px;
+        }
+        &__card{
+            max-width: 670px;
+        }     
     }
 }
